@@ -13,7 +13,7 @@ const GameList GameManager::operator[](const Date& d) const
 			res.games[res.count++] = m_games[i];
 	}
 	return res;
-}
+}//same as the following
 
 const GameList GameManager::operator[](const TimeAndDate& tad) const
 {
@@ -25,13 +25,13 @@ const GameList GameManager::operator[](const TimeAndDate& tad) const
 			res.games[res.count++] = m_games[i];
 	}
 	return res;
-}
+}//for each stadium get the array ofgames and connect them
 
 void GameManager::CancelGame(){
 	Game gameToCancel();
 	//get the game 
 
-}
+}// go to stadium and set the games time to null
 
 void GameManager::SendInvitations(){
 //we need an array of all inlisted people.
@@ -40,7 +40,7 @@ void GameManager::SendInvitations(){
 
 	}
 
-}
+}// for each one of the make "invite"
 void GameManager::SellTickets(){
 //we need an array of all inlested people.
 	int length;
@@ -203,5 +203,5 @@ const GameManager& GameManager::operator+=(const Game& g)
 	}
 	length++;
 	s_length++;
-}
+}//call addGame, addGame run in all the stadiums and finds the one that fits
 
